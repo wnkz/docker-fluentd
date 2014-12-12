@@ -5,6 +5,6 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN gem install fluentd --no-ri --no-rdoc
 RUN fluentd --setup
-RUN gem install fluent-plugin-loggly
+RUN fluent-gem install fluent-plugin-elasticsearch
 
 CMD ["fluentd", "-v"]
