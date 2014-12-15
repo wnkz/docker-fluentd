@@ -9,5 +9,6 @@ RUN fluent-gem install fluent-plugin-elasticsearch
 RUN fluent-gem install fluent-plugin-rewrite-tag-filter
 RUN fluent-gem install fluent-plugin-parser
 RUN fluent-gem install fluent-plugin-grok-parser
+ADD grok-patterns /etc/fluent/grok-patterns
 
 CMD ["fluentd", "-v"]
